@@ -1,0 +1,138 @@
+# Print Preview Web Application - Cursor Rules
+
+## Project Overview
+A simple, interactive web application that allows users to upload files, preview them for printing with customizable options, and generate UPI QR codes for payment.
+
+## Technology Stack
+- **Frontend**: React with basic HTML/CSS
+- **Styling**: Vanilla CSS (no frameworks)
+- **File Handling**: HTML5 File API
+- **Print Preview**: Canvas API for rendering
+- **QR Generation**: Basic JavaScript QR library
+- **State Management**: React useState/useEffect hooks
+
+## Code Style & Standards
+
+### General Guidelines
+- Keep code simple and readable
+- Use functional components with hooks
+- Minimize external dependencies
+- Write self-documenting code with clear variable names
+- Use consistent indentation (2 spaces)
+
+### File Structure
+```
+src/
+  components/
+    FileUpload.js
+    PrintPreview.js
+    PrintOptions.js
+    PaymentSection.js
+  utils/
+    qrGenerator.js
+    printCalculations.js
+  styles/
+    main.css
+  App.js
+```
+
+### React Guidelines
+- Use functional components exclusively
+- Implement proper error boundaries
+- Handle loading states gracefully
+- Use descriptive prop names
+- Keep components focused on single responsibilities
+
+### CSS Guidelines
+- Use CSS Grid/Flexbox for layouts
+- Implement responsive design principles
+- Use CSS variables for consistent theming
+- Keep specificity low, avoid deep nesting
+- Use semantic class names (BEM methodology preferred)
+
+### JavaScript Guidelines
+- Use modern ES6+ syntax
+- Implement proper error handling with try-catch
+- Use async/await for asynchronous operations
+- Validate user inputs thoroughly
+- Handle edge cases gracefully
+
+## Feature Implementation Rules
+
+### File Upload & Preview
+- Accept common file formats (PDF, images, documents)
+- Display file information (name, size, type)
+- Show preview using Canvas API or appropriate method
+- Handle file size limitations gracefully
+- Provide clear error messages for unsupported formats
+
+### Print Options
+- Implement real-time preview updates
+- Use controlled components for all form inputs
+- Validate option combinations (e.g., duplex availability)
+- Calculate pricing dynamically based on selections
+- Provide visual feedback for option changes
+
+### Payment Integration
+- Generate UPI QR codes with proper formatting
+- Include all required payment parameters
+- Display pricing breakdown clearly
+- Handle QR generation errors gracefully
+- Provide fallback payment information
+
+## Performance Guidelines
+- Optimize file processing for large documents
+- Implement lazy loading for preview generation
+- Debounce option changes to prevent excessive re-renders
+- Use React.memo for expensive components
+- Minimize DOM manipulations
+
+## Security Considerations
+- Validate all file uploads client-side
+- Sanitize user inputs
+- Don't store sensitive payment information
+- Use secure QR code generation practices
+- Implement proper error handling without exposing internals
+
+## User Experience Guidelines
+- Provide clear visual feedback for all actions
+- Show loading states during file processing
+- Display helpful error messages
+- Implement intuitive navigation flow
+- Ensure accessibility with proper ARIA labels
+- Make interface responsive for mobile devices
+
+## Testing Approach
+- Test with various file formats and sizes
+- Verify print option combinations work correctly
+- Test QR code generation with different amounts
+- Ensure error handling works as expected
+- Test on different browsers and devices
+
+## Error Handling Standards
+- Always provide user-friendly error messages
+- Log errors appropriately for debugging
+- Implement fallback behaviors where possible
+- Never expose technical error details to users
+- Handle network failures gracefully
+
+## Code Organization
+- Group related functionality together
+- Use meaningful file and function names
+- Keep functions small and focused
+- Implement proper separation of concerns
+- Document complex logic with comments
+
+## Dependencies Management
+- Minimize external library usage
+- Choose lightweight, well-maintained libraries
+- Document why each dependency is necessary
+- Keep bundle size optimized
+- Use tree-shaking when possible
+
+## Browser Compatibility
+- Target modern browsers (Chrome, Firefox, Safari, Edge)
+- Implement graceful degradation for older browsers
+- Test on mobile browsers
+- Use appropriate polyfills if needed
+- Provide browser compatibility warnings if necessary
